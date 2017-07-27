@@ -255,6 +255,8 @@ for name in [ "bob", "sam", "ben", "sue", "bev" ] :
 	print(name)
 ```
 
+--
+
 You can use the range function to use a numeric counter:
 ```python
 for i in range(10):
