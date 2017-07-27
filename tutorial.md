@@ -14,7 +14,7 @@ Does Sherman really know python?
 The `python` command starts the python interpreter.
 
 ```
-localhost:~/tutorial$ python
+bash$ python
 Python 2.7.12 (default, Oct 11 2016, 05:24:00)
 [GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.38)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
@@ -39,8 +39,8 @@ print("hello world")
 Make the script executable:
 
 ```
-localhost:~/tutorial$ chmod +x tut1.py
-localhost:~/tutorial$
+bash$ chmod +x tut1.py
+bash$
 ```
 
 --
@@ -48,9 +48,9 @@ localhost:~/tutorial$
 Run the script from the command prompt:
 
 ```
-localhost:~/tutorial$ ./tut1.py
+bash$ ./tut1.py
 hello world
-localhost:~/tutorial$
+bash$
 ```
 
 ---
