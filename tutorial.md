@@ -89,25 +89,10 @@ print(x/y) # prints 0.44879895000000003
 
 ---
 
-# Strings in Python
-
-Strings are written using double quotes. Strings can be concatenated using
-the `+` operator.
-
-```python
-x = "this is a "
-y = "test"
-print(x+y) # prints "this is a test"
-print( len(x+y) ) # prints 14
-```
-
----
-
 # Sequence Types
 
 There are six sequence types in python: str, unicode, list, tuple, buffer, xrange.
-We are going to talk about str, list, tuple. (We already mentioned strings
-in the last slide.)
+We are going to talk about str, list, tuple.
 
 --
 
@@ -118,7 +103,20 @@ print(x[0]) # b
 print(x[2]) # r
 ```
 
+This may look familiar like arrays in other languages.
+
 --
+
+Strings are written using double quotes.
+```python
+x = "this is a test"
+print( len(x) ) # prints 14
+print( x[10] )  # prints t
+```
+
+---
+
+# Lists and Tuples
 
 Lists are constructed with brackets and every element should be the same
 type. Lists can be mutated.
