@@ -186,10 +186,6 @@ The syntax: `[ expression for item in list if conditional ]`
 
 ---
 
-# Map / Reduce
-
----
-
 # Dictionaries
 
 ---
@@ -253,6 +249,10 @@ extended
 ---
 
 # Lambda Forms
+
+---
+
+# Map / Reduce
 
 ---
 
