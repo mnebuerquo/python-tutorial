@@ -328,25 +328,43 @@ print("done")
 
 # Functions
 
-def
-
---
-
-return
+Define a function using `def`. Returning a value works similarly to other
+languages:
+```python
+def cube( x ):
+	return x * x * x
+```
 
 ---
 
 # Function vs Global Scope
 
-global keyword
+Variables in a function are assumed to be local unless marked as global:
+```python
+glob = 0
+def doSomething( x ):
+	global glob
+	glob += x
+	print(glob)
+```
 
 # Function Arguments
 
-default
+Function arguments can have default values. The arguments are positional, so
+those with defaults must be specified last in the argument list:
+```python
+def myfunc( x, y=8, z=5 ):
+	print(x, y, z)
+
+myfunc( 1, 2 ) # prints (1, 2, 5)
+```
 
 --
 
-keyword
+When you call a function you can specify arguments by name:
+```python
+myfunc(7, z=9) # prints (7, 8, 9)
+```
 
 --
 
