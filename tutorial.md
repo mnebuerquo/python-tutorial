@@ -74,7 +74,7 @@ Integers:
 ```python
 x = 10
 y = 3
-print(x/y) # prints 3 
+print(x/y) # prints 3
            # (notice that integer division gives you an integer)
 ```
 
@@ -145,7 +145,7 @@ seq = [ 1, 2, 3, 4, 5 ]
 ```
 
 Slice `seq[ start : stop ]` returns a slice from the sequence, where
-`start` is the first element in the slice, and `stop` is the element 
+`start` is the first element in the slice, and `stop` is the element
 after the slice.
 ```python
 seq[1:3] # [ 2, 3 ]
@@ -223,7 +223,7 @@ Use the `in` operator to check if a key exists:
 
 Python defines blocks by indenting then code in the inner block.
 
-The `if` statement executes the indented code block if the condition 
+The `if` statement executes the indented code block if the condition
 evaluates to `True`:
 ```python
 if condition :
@@ -270,10 +270,10 @@ The while loop iterates as long as a condition is true:
 i = 0
 while i < 10 :
 	print(i)
-	i = i+1 
+	i = i+1
 ```
 
---- 
+---
 
 # Exiting a Loop
 
@@ -284,7 +284,7 @@ for i in range(10):
 	if i == 3:
 		continue
 	print(i) # prints 0 1 2 4 5 6 7 8 9
-``` 
+```
 
 --
 
@@ -299,9 +299,7 @@ for i in range(10):
 
 # Else
 
-The `else` is not just used after `if`, but can follow a loop. The `else`
-block is only executed after the loop condition evaluates as `False`, but
-not following a `break`:
+The `else` is not just used after `if`, but can follow a loop:
 ```python
 for i in range(10):
 	pass
@@ -309,6 +307,10 @@ else:
 	print("else")
 ```
 
+--
+
+The `else` block is only executed after the loop condition evaluates
+as `False`, but not following a `break`:
 ```python
 for i in range(10):
 	if i == 3:
