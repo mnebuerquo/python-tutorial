@@ -89,6 +89,57 @@ print(x/y) # prints 0.44879895000000003
 
 ---
 
+# Strings in Python
+
+Strings are written using double quotes. Strings can be concatenated using
+the `+` operator.
+
+```python
+x = "this is a "
+y = "test"
+print(x+y) # prints "this is a test"
+print( len(x+y) ) # prints 14
+```
+
+---
+
+# Sequence Types
+
+There are six sequence types in python: str, unicode, list, tuple, buffer, xrange.
+We are going to talk about str, list, tuple. (We already mentioned strings
+in the last slide.)
+
+--
+
+Access elements of a sequence using brackets:
+```python
+x = "bar"
+print(x[0]) # b
+print(x[2]) # r
+```
+
+--
+
+Lists are constructed with brackets and every element should be the same
+type. Lists can be mutated.
+```python
+mylist = [ "foo", "bar", "baz", "wow" ]
+mylist[4] = "new"
+print( mylist[4] ) # prints "new"
+```
+
+--
+
+Tuples are created with parentheses. They can not be appended nor can elements be replaced.
+You would have to create a new tuple with different elements instead.
+```python
+mytuple = (1, "foo", 3.14159265)
+print( mytuple[1] ) # prints "foo"
+mytuple[1] = "bar" # TypeError: 'tuple' object does not support item assignment
+```
+
+---
+
 # Done!
 
 You have now completed the tutorial mission.
