@@ -138,6 +138,92 @@ mytuple[1] = "bar" # TypeError: 'tuple' object does not support item assignment
 
 ---
 
+# Slices
+
+---
+
+# Comprehensions
+
+---
+
+# Map / Reduce
+
+---
+
+# Dictionaries
+
+---
+
+# Control Flow
+
+if
+
+--
+
+pass
+
+---
+
+# Loops
+
+for
+
+--
+
+while
+
+--- 
+
+# Exiting a Loop
+
+continue / break
+
+-- 
+
+else
+
+---
+
+# Functions
+
+def
+
+--
+
+return
+
+---
+
+# Function vs Global Scope
+
+global keyword
+
+# Function Arguments
+
+default
+
+--
+
+keyword
+
+--
+
+extended
+
+---
+
+# Lambda Forms
+
+---
+
+# Modules
+
+---
+
+# Classes
+
+---
+
 # Done!
 
 You have now completed the tutorial mission.
