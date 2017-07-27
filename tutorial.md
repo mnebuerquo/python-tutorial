@@ -140,13 +140,13 @@ mytuple[1] = "bar" # TypeError: 'tuple' object does not support item assignment
 
 # Slices
 
-Use this list for the examples:
 ```python
 seq = [ 1, 2, 3, 4, 5 ]
 ```
 
-Slice `sequence[ start : stop ]` returns a slice from the sequence, where
-`start` is the first element in the slice, and `stop` is the element after the slice.
+Slice `seq[ start : stop ]` returns a slice from the sequence, where
+`start` is the first element in the slice, and `stop` is the element 
+after the slice.
 ```python
 seq[1:3] # [ 2, 3 ]
 ```
