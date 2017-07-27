@@ -234,6 +234,8 @@ else :
 	statement
 ```
 
+---
+
 # Pass
 
 Sometimes you need a statement to complete the syntax, but you do not need
