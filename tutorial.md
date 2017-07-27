@@ -188,35 +188,133 @@ The syntax: `[ expression for item in list if conditional ]`
 
 # Dictionaries
 
+A dictionary maps keys to values. It is an unordered collection of key/value
+pairs.
+```python
+d = { "foo": 37, "bar": 99, "baz": 42, "woo": 0 }
+```
+
+--
+
+Access a key using bracket notation. You can add new keys this way too:
+```python
+d["foo"] # 37
+d["what"] = 45
+```
+
+--
+
+Remove a key using `del` operator:
+```python
+del d["bar"]
+```
+
+--
+
+Use the `in` operator to check if a key exists:
+```python
+"foo" in d # True
+"noo" in d # False
+```
+
 ---
 
 # Control Flow
 
-if
+Python defines blocks by indenting then code in the inner block.
 
---
+The `if` statement executes the indented code block if the condition 
+evaluates to `True`:
+```python
+if condition :
+	statement
+elif condition :
+	statement
+else :
+	statement
+```
 
-pass
+# Pass
+
+Sometimes you need a statement to complete the syntax, but you do not need
+to execute any operation. Use pass as a null statement:
+```python
+if 3 < 5 :
+	pass # does nothing
+else
+	pass # does nothing
+```
 
 ---
 
 # Loops
 
-for
+The for loop iterates over a sequence:
+```python
+for name in [ "bob", "sam", "ben", "sue", "bev" ] :
+	print(name)
+```
+
+You can use the range function to use a numeric counter:
+```python
+for i in range(10):
+	pass
+```
 
 --
 
-while
+The while loop iterates as long as a condition is true:
+```python
+i = 0
+while i < 10 :
+	print(i)
+	i = i+1 
+```
 
 --- 
 
 # Exiting a Loop
 
-continue / break
+The `continue` statement skips to the next iteration of the loop and
+continues looping:
+```python
+for i in range(10):
+	if i == 3:
+		continue
+	print(i) # prints 0 1 2 4 5 6 7 8 9
+``` 
 
--- 
+--
 
-else
+The `break` statement skips out of the loop without executing any more
+iterations.
+```python
+for i in range(10):
+	if i == 3:
+		break
+	print(i) # prints 0 1 2
+```
+
+# Else
+
+The `else` is not just used after `if`, but can follow a loop. The `else`
+block is only executed after the loop condition evaluates as `False`, but
+not following a `break`:
+```python
+for i in range(10):
+	pass
+else:
+	print("else")
+```
+
+```python
+for i in range(10):
+	if i == 3:
+		break
+else:
+	print("else")
+print("done")
+```
 
 ---
 
