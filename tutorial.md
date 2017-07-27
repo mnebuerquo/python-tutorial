@@ -171,10 +171,18 @@ seq[:3]  # [ 1, 2, 3 ]
 seq[-2:] # [ 4, 5 ]
 ```
 
-
 ---
 
 # Comprehensions
+
+A list comprehension is a construct that generates a new list by
+transforming a list.
+
+The syntax: `[ expression for item in list if conditional ]`
+
+```python
+[x+1 for x in range(10) if x % 2 == 0] # [ 1, 3, 5, 7, 9 ]
+```
 
 ---
 
