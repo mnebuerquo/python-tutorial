@@ -9,7 +9,7 @@ Does Sherman really know python?
 
 ---
 
-# Running Python
+# Running Python Interactively
 
 The `python` command starts the python interpreter.
 
@@ -21,6 +21,36 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> print("hello world")
 hello world
 >>>
+```
+
+---
+
+# Running a Python Script
+
+This is a simple python script, which we'll save as tut1.py:
+
+```python
+#!/usr/bin/python
+print("hello world")
+```
+
+--
+
+Make the script executable:
+
+```
+localhost:~/tutorial$ chmod +x tut1.py
+localhost:~/tutorial$
+```
+
+--
+
+Run the script from the command prompt:
+
+```
+localhost:~/tutorial$ ./tut1.py
+hello world
+localhost:~/tutorial$
 ```
 
 ---
