@@ -140,6 +140,38 @@ mytuple[1] = "bar" # TypeError: 'tuple' object does not support item assignment
 
 # Slices
 
+Use this list for the examples:
+```python
+seq = [ 1, 2, 3, 4, 5 ]
+```
+
+Slice `sequence[ start : stop ]` returns a slice from the sequence, where
+`start` is the first element in the slice, and `stop` is the element after the slice.
+```python
+seq[1:3] # [ 2, 3 ]
+```
+
+--
+
+Slices with negative indexes count backwards from the end of the list:
+```python
+seq[-1]   # 5
+seq[1:-1] # [ 2, 3, 4 ]
+seq[-3:3] # [ 3 ]
+seq[-1:1] # []
+```
+
+--
+
+You may omit either index in the slice to read from the start or to the end
+of the list:
+```python
+seq[2:]  # [ 3, 4, 5 ]
+seq[:3]  # [ 1, 2, 3 ]
+seq[-2:] # [ 4, 5 ]
+```
+
+
 ---
 
 # Comprehensions
