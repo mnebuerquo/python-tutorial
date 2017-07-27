@@ -299,6 +299,8 @@ for i in range(10):
 	print(i) # prints 0 1 2
 ```
 
+---
+
 # Else
 
 The `else` is not just used after `if`, but can follow a loop:
