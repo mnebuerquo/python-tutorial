@@ -13,7 +13,7 @@ Does Sherman really know python?
 
 The `python` command starts the python interpreter.
 
-```python
+```text
 bash$ python
 Python 2.7.12 (default, Oct 11 2016, 05:24:00)
 [GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.38)] on darwin
