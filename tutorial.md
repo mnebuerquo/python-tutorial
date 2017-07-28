@@ -54,6 +54,10 @@ hello world
 bash$
 ```
 
+--
+
+You have just written and executed your first python program!
+
 ---
 
 # Variables in Python
