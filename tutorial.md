@@ -1,8 +1,9 @@
 # Sherman's Python Tutorial
 
-Let's learn some basics of python.
+Let's learn some basics of python in 30 minutes.
 
-We'll assume you already have python 2.7 installed.
+We'll assume you already have python 2.7 installed. The code here should
+work in 3.x as well.
 
 ???
 Does Sherman really know python?
@@ -227,11 +228,11 @@ The `if` statement executes the indented code block if the condition
 evaluates to `True`:
 ```python
 if condition :
-	statement
+    statement
 elif condition :
-	statement
+    statement
 else :
-	statement
+    statement
 ```
 
 ---
@@ -242,9 +243,9 @@ Sometimes you need a statement to complete the syntax, but you do not need
 to execute any operation. Use pass as a null statement:
 ```python
 if 3 < 5 :
-	pass # does nothing
+    pass # does nothing
 else
-	pass # does nothing
+    pass # does nothing
 ```
 
 ---
@@ -254,7 +255,7 @@ else
 The for loop iterates over a sequence:
 ```python
 for name in [ "bob", "sam", "ben", "sue", "bev" ] :
-	print(name)
+    print(name)
 ```
 
 --
@@ -262,7 +263,7 @@ for name in [ "bob", "sam", "ben", "sue", "bev" ] :
 You can use the range function to use a numeric counter:
 ```python
 for i in range(10):
-	pass
+    pass
 ```
 
 --
@@ -271,8 +272,8 @@ The while loop iterates as long as a condition is true:
 ```python
 i = 0
 while i < 10 :
-	print(i)
-	i = i+1
+    print(i)
+    i = i+1
 ```
 
 ---
@@ -283,9 +284,9 @@ The `continue` statement skips to the next iteration of the loop and
 continues looping:
 ```python
 for i in range(10):
-	if i == 3:
-		continue
-	print(i) # prints 0 1 2 4 5 6 7 8 9
+    if i == 3:
+        continue
+    print(i) # prints 0 1 2 4 5 6 7 8 9
 ```
 
 --
@@ -294,9 +295,9 @@ The `break` statement skips out of the loop without executing any more
 iterations.
 ```python
 for i in range(10):
-	if i == 3:
-		break
-	print(i) # prints 0 1 2
+    if i == 3:
+        break
+    print(i) # prints 0 1 2
 ```
 
 ---
@@ -306,9 +307,9 @@ for i in range(10):
 The `else` is not just used after `if`, but can follow a loop:
 ```python
 for i in range(10):
-	pass
+    pass
 else:
-	print("else")
+    print("else")
 ```
 
 --
@@ -317,10 +318,10 @@ The `else` block is only executed after the loop condition evaluates
 as `False`, but not following a `break`:
 ```python
 for i in range(10):
-	if i == 3:
-		break
+    if i == 3:
+        break
 else:
-	print("else")
+    print("else")
 print("done")
 ```
 
@@ -332,7 +333,7 @@ Define a function using `def`. Returning a value works similarly to other
 languages:
 ```python
 def cube( x ):
-	return x * x * x
+    return x * x * x
 ```
 
 ---
@@ -343,9 +344,9 @@ Variables in a function are assumed to be local unless marked as global:
 ```python
 glob = 0
 def doSomething( x ):
-	global glob
-	glob += x
-	print(glob)
+    global glob
+    glob += x
+    print(glob)
 ```
 
 ---
@@ -356,7 +357,7 @@ Function arguments can have default values. The arguments are positional, so
 those with defaults must be specified last in the argument list:
 ```python
 def myfunc( x, y=8, z=5 ):
-	print(x, y, z)
+    print(x, y, z)
 
 myfunc( 1, 2 ) # prints (1, 2, 5)
 ```
@@ -438,11 +439,41 @@ import it using the filename minus the extension.
 
 # Classes
 
+Everything in python is an object.
+
+--
+
+Create a class using the class keyword:
+```python
+class MyClass:
+    def myfunc(self, x):
+        print(x)
+
+m = MyClass()
+
+m.myfunc(4) # 4
+```
+
+--
+
+Use an `__init__` function for a constructor:
+```python
+class MyClass:
+	def __init__(self, foo, bar):
+		self.foo = foo
+		self.bar = bar
+	def printme(self):
+		print(self.foo, self.bar)
+
+m = MyClass(5, 7)
+m.printme() # (5, 7)
+```
+
 ---
 
 # Done!
 
-You have now completed the tutorial mission.
+You have now completed the tutorial mission. That means you are now
+qualified to write python code!
 
-???
-Thank you for attending.
+Congratulations on your new skill!
