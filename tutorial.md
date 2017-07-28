@@ -431,6 +431,7 @@ You create your own modules by creating a new python file (`*.py`), then you can
 import it using the filename minus the extension.
 
 ???
+[about modules and packages](https://www.learnpython.org/en/Modules_and_Packages)
 [import antigravity](https://xkcd.com/353/)
 
 ---
