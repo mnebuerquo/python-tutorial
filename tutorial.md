@@ -20,10 +20,14 @@ bash$ python
 
 You will see the following prompt:
 
-	Python 2.7.12 (default, Oct 11 2016, 05:24:00)
-	[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.38)] on darwin
-	Type "help", "copyright", "credits" or "license" for more information.
-	>>>
+.hljs[
+```
+Python 2.7.12 (default, Oct 11 2016, 05:24:00)
+[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.38)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+```
+]
 
 --
 
@@ -236,8 +240,8 @@ print( mylist[4] ) # prints "new"
 
 --
 
-Tuples are created with parentheses. They can not be appended nor can elements 
-be replaced (immutable).  You would have to create a new tuple with different 
+Tuples are created with parentheses. They can not be appended nor can elements
+be replaced (immutable).  You would have to create a new tuple with different
 elements instead.
 ```python
 mytuple = (1, "foo", 3.14159265)
