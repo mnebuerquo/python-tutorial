@@ -348,6 +348,8 @@ def doSomething( x ):
 	print(glob)
 ```
 
+---
+
 # Function Arguments
 
 Function arguments can have default values. The arguments are positional, so
@@ -368,15 +370,49 @@ myfunc(7, z=9) # prints (7, 8, 9)
 
 --
 
-extended
+You can use `*args` and `**kwargs` to capture arguments without specifying
+them in advance:
+```python
+def my_function(**kwargs):
+    print str(kwargs)
+
+my_function(a=12, b="abc") # {'a': 12, 'b': 'abc'}
+```
 
 ---
 
 # Lambda Forms
 
+You can create an anonymous function in python using lambda:
+```python
+g = lambda x: x**2
+
+g(8) # 64
+```
+
 ---
 
 # Map / Reduce
+
+Map transforms a sequence into another sequence. This is equivalent to a
+list comprehension. Comprehensions are usually considered more 'pythonic':
+```python
+map( lambda x: x**2, [1,2,3] ) # [1, 4, 9]
+
+[ x**2 for x in [1,2,3] ]      # [1, 4, 9]
+```
+
+--
+
+Reduce transforms a sequence into something else:
+```python
+f = lambda a,b: a if (a > b) else b
+
+reduce(f, [47,11,42,102,13]) # 102
+```
+
+???
+[The reduce example is from an online course.](http://www.python-course.eu/lambda.php)
 
 ---
 
