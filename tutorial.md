@@ -94,136 +94,6 @@ print(x/y) # prints 0.44879895000000003
 
 ---
 
-# Sequence Types
-
-There are six sequence types in python: str, unicode, list, tuple, buffer, xrange.
-We are going to talk about str, list, tuple.
-
---
-
-Access elements of a sequence using brackets:
-```python
-x = "bar"
-print(x[0]) # b
-print(x[2]) # r
-```
-
-This may look familiar like arrays in other languages.
-
---
-
-Strings are written using double quotes.
-```python
-x = "this is a test"
-print( len(x) ) # prints 14
-print( x[10] )  # prints t
-```
-
----
-
-# Lists and Tuples
-
-Lists are constructed with brackets and every element should be the same
-type. Lists can be mutated.
-```python
-mylist = [ "foo", "bar", "baz", "wow" ]
-mylist[4] = "new"
-print( mylist[4] ) # prints "new"
-```
-
---
-
-Tuples are created with parentheses. They can not be appended nor can elements be replaced.
-You would have to create a new tuple with different elements instead.
-```python
-mytuple = (1, "foo", 3.14159265)
-print( mytuple[1] ) # prints "foo"
-mytuple[1] = "bar" # TypeError: 'tuple' object does not support item assignment
-```
-
----
-
-# Slices
-
-```python
-seq = [ 1, 2, 3, 4, 5 ]
-```
-
-Slice `seq[ start : stop ]` returns a slice from the sequence, where
-`start` is the first element in the slice, and `stop` is the element
-after the slice.
-```python
-seq[1:3] # [ 2, 3 ]
-```
-
---
-
-Slices with negative indexes count backwards from the end of the list:
-```python
-seq[-1]   # 5
-seq[1:-1] # [ 2, 3, 4 ]
-seq[-3:3] # [ 3 ]
-seq[-1:1] # []
-```
-
---
-
-You may omit either index in the slice to read from the start or to the end
-of the list:
-```python
-seq[2:]  # [ 3, 4, 5 ]
-seq[:3]  # [ 1, 2, 3 ]
-seq[-2:] # [ 4, 5 ]
-```
-
----
-
-# Comprehensions
-
-A list comprehension is a construct that generates a new list by
-transforming a list.
-
-The syntax: `[ expression for item in list if conditional ]`
-
-```python
-[x+1 for x in range(10) if x % 2 == 0] # [ 1, 3, 5, 7, 9 ]
-```
-
----
-
-# Dictionaries
-
-A dictionary maps keys to values. It is an unordered collection of key/value
-pairs.
-```python
-d = { "foo": 37, "bar": 99, "baz": 42, "woo": 0 }
-```
-
---
-
-Access a key using bracket notation. You can add new keys this way too:
-```python
-d["foo"] # 37
-d["what"] = 45
-```
-
---
-
-Remove a key using `del` operator:
-```python
-del d["bar"]
-```
-
---
-
-Use the `in` operator to check if a key exists:
-```python
-"foo" in d # True
-"noo" in d # False
-```
-
----
-
 # Control Flow
 
 Python defines blocks by indenting then code in the inner block.
@@ -231,25 +101,12 @@ Python defines blocks by indenting then code in the inner block.
 The `if` statement executes the indented code block if the condition
 evaluates to `True`:
 ```python
-if condition :
+if condition:
     statement
-elif condition :
+elif condition:
     statement
-else :
+else:
     statement
-```
-
----
-
-# Pass
-
-Sometimes you need a statement to complete the syntax, but you do not need
-to execute any operation. Use pass as a null statement:
-```python
-if 3 < 5 :
-    pass # does nothing
-else
-    pass # does nothing
 ```
 
 ---
@@ -258,7 +115,7 @@ else
 
 The for loop iterates over a sequence:
 ```python
-for name in [ "bob", "sam", "ben", "sue", "bev" ] :
+for name in [ "bob", "sam", "ben", "sue", "bev" ]:
     print(name)
 ```
 
@@ -267,7 +124,7 @@ for name in [ "bob", "sam", "ben", "sue", "bev" ] :
 You can use the range function to use a numeric counter:
 ```python
 for i in range(10):
-    pass
+    pass # this statement does nothing! use it as a placeholder
 ```
 
 --
@@ -275,7 +132,7 @@ for i in range(10):
 The while loop iterates as long as a condition is true:
 ```python
 i = 0
-while i < 10 :
+while i < 10:
     print(i)
     i = i+1
 ```
@@ -331,6 +188,137 @@ print("done")
 
 ---
 
+# Sequence Types
+
+There are six sequence types in python: str, unicode, list, tuple, buffer, xrange.
+We are going to talk about str, list, tuple.
+
+--
+
+Access elements of a sequence (such as a string) using brackets:
+```python
+x = "bar"
+print(x[0]) # b
+print(x[2]) # r
+```
+
+This may look familiar like arrays in other languages.
+
+--
+
+Strings are written using double quotes.
+```python
+x = "this is a test"
+print( len(x) ) # prints 14
+print( x[10] )  # prints t
+```
+
+---
+
+# Lists and Tuples
+
+Lists are constructed with brackets and every element should be the same
+type. Lists can be changed and appened (mutable).
+```python
+mylist = [ "foo", "bar", "baz", "wow" ]
+mylist[4] = "new"
+print( mylist[4] ) # prints "new"
+```
+
+--
+
+Tuples are created with parentheses. They can not be appended nor can elements 
+be replaced (immutable).  You would have to create a new tuple with different 
+elements instead.
+```python
+mytuple = (1, "foo", 3.14159265)
+print( mytuple[1] ) # prints "foo"
+mytuple[1] = "bar" # TypeError: 'tuple' object does not support item assignment
+```
+
+---
+
+# Slices
+
+```python
+seq = [ 1, 2, 3, 4, 5 ]
+```
+
+Slice `seq[ start: stop ]` returns a slice from the sequence, where
+`start` is the first element in the slice, and `stop` is the element
+after the slice.
+```python
+seq[1:3] # [ 2, 3 ]
+```
+
+--
+
+Slices with negative indexes count backwards from the end of the list:
+```python
+seq[-1]   # 5
+seq[1:-1] # [ 2, 3, 4 ]
+seq[-3:3] # [ 3 ]
+seq[-1:1] # []
+```
+
+--
+
+You may omit either index in the slice to read from the start or to the end
+of the list:
+```python
+seq[2:]  # [ 3, 4, 5 ]
+seq[:3]  # [ 1, 2, 3 ]
+seq[-2:] # [ 4, 5 ]
+```
+
+---
+
+# Dictionaries
+
+A dictionary maps keys to values. It is an unordered collection of key/value
+pairs.
+```python
+d = { "foo": 37, "bar": 99, "baz": 42, "woo": 0 }
+```
+
+--
+
+Access a key using bracket notation. You can add new keys this way too:
+```python
+d["foo"] # 37
+d["what"] = 45
+```
+
+--
+
+Remove a key using `del` operator:
+```python
+del d["bar"]
+```
+
+--
+
+Use the `in` operator to check if a key exists:
+```python
+"foo" in d # True
+"noo" in d # False
+```
+
+---
+
+# Comprehensions
+
+A list comprehension is a construct that generates a new list by
+transforming a list.
+
+The syntax: `[ expression for item in list if conditional ]`
+
+```python
+[x+1 for x in range(10) if x % 2 == 0] # [ 1, 3, 5, 7, 9 ]
+```
+
+---
+
 # Functions
 
 Define a function using `def`. Returning a value works similarly to other
@@ -351,6 +339,21 @@ def doSomething( x ):
     global glob
     glob += x
     print(glob)
+```
+
+--
+
+Global variables are visible within a function but assignment creates a new
+local which shadows the global.
+```python
+meaning_of_life = 42
+def life(x):
+	if x == meaning_of_life:
+		return True
+	else:
+		return False
+life(39) # false
+life(42) # true
 ```
 
 ---
@@ -409,7 +412,10 @@ map( lambda x: x**2, [1,2,3] ) # [1, 4, 9]
 
 --
 
-Reduce transforms a sequence into something else:
+Reduce transforms a sequence into a single value. The lambda function takes
+two arguments which are the first two elements of the list, and in later
+iterations they are the result of the last call and the next element of the
+list:
 ```python
 f = lambda a,b: a if (a > b) else b
 
