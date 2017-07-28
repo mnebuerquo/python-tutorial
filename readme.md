@@ -14,5 +14,5 @@ When you are viewing the slideshow, space advances to the next slide, the up
 and down arrow keys move back and forward.
 
 If you are the presenter, press C to clone the window (one for the laptop, and
-one for the projector display), and then with the presenter window selected
-P to turn on presenter mode.
+one for the projector display), and then with the presenter window selected,
+press P to turn on presenter mode.
