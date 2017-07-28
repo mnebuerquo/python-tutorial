@@ -418,6 +418,21 @@ reduce(f, [47,11,42,102,13]) # 102
 
 # Modules
 
+Use the `import` keyword to import functions from another module:
+```python
+import random
+from math import floor
+floor( random.random() * 100 ) # ???
+```
+
+--
+
+You create your own modules by creating a new python file (`*.py`), then you can
+import it using the filename minus the extension.
+
+???
+[import antigravity](https://xkcd.com/353/)
+
 ---
 
 # Classes
