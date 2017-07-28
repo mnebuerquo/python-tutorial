@@ -25,7 +25,7 @@ You will see the following prompt:
 	Type "help", "copyright", "credits" or "license" for more information.
 	>>>
 
----
+--
 
 ```python
 >>> print("hello world")
