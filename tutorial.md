@@ -127,6 +127,14 @@ else:
     statement
 ```
 
+-- 
+
+Another form of if is the ternary operator:
+```python
+y = 7
+x = 5 if y>1 else 10 # x is now equal to 5
+```
+
 ---
 
 # Loops
