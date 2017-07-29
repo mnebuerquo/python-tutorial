@@ -1,3 +1,8 @@
+.center[![import antigravity](https://imgs.xkcd.com/comics/python.png)]
+.center[[XKCD #353: Python](https://xkcd.com/353/)]
+
+---
+
 # Sherman's One-Hour Python Tutorial
 
 Let's learn some basics of python in 60 minutes.
@@ -454,9 +459,42 @@ floor( random.random() * 100 ) # ???
 You create your own modules by creating a new python file (`*.py`), then you can
 import it using the filename minus the extension.
 
+```python
+# for file mymodule.py containing function 'myfunction'
+import mymodule                 # mymodule.myfunction()
+import mymodule.myfunction      # mymodule.myfunction()
+from mymodule import myfunction # myfunction()
+```
+
+---
+
+# Packages
+
+A package is a directory with multiple modules and an `__init__.py` in it. You 
+can import the entire package or individual modules or functions.
+
+```bash
+bash$ ls -la mypackage/
+total 0
+drwxr-xr-x  4 sherman  sherman  136 Jul 29 08:44 .
+drwxr-xr-x  9 sherman  sherman  306 Jul 29 08:44 ..
+-rw-r--r--  1 sherman  sherman    0 Jul 29 08:44 __init__.py
+-rw-r--r--  1 sherman  sherman    0 Jul 29 08:44 mymodule.py
+```
+
+--
+
+```python
+# we want to use function 'myfunction'
+import mypackage                          # mypackage.mymodule.myfunction()
+import mypackage.mymodule                 # mypackage.mymodule.myfunction()
+from mypackage import mymodule            # mymodule.myfunction()
+from mypackage.mymodule import myfunction # myfunction()
+```
+
 ???
+[python tutorial](https://docs.python.org/2/tutorial/modules.html)
 [about modules and packages](https://www.learnpython.org/en/Modules_and_Packages)
-[import antigravity](https://xkcd.com/353/)
 
 ---
 
@@ -493,6 +531,44 @@ m.printme() # (5, 7)
 ```
 
 ---
+
+# Class Participation!
+
+An exercise commonly used in job interviews is Fizz Buzz. We're going to
+write a Fizz Buzz solution in python using the skills you just learned.
+
+With the numbers 1 through 100, print 'Fizz' if the number is a multiple of
+3, or print 'Buzz' if the number is a multiple of 5. If the number is both a
+multiple of 3 and a multiple of 5, print 'Fizzbuzz'. If the number is not a
+multiple of either 3 or 5, print the number.
+
+# Solution 1
+
+```python
+for x in range(100):
+	n = x+1
+	if n % 5 == 0 and n % 3 == 0:
+		print("fizzbuzz")
+	elif n % 3 == 0:
+		print("fizz")
+	elif n % 5 == 0:
+		print("buzz")
+	else:
+		print(n)
+```
+
+# Solution 2
+
+```python
+def prn(w):
+	print(w)
+map( prn,
+		[ ( "fizzbuzz" if x % 15 == 0 else
+			( "fizz" if x % 3 == 0 else
+				( "buzz" if x % 5 == 0 else
+					x) ) ) for x in 
+				[x+1 for x in range(100)] ])
+```
 
 # Done!
 
