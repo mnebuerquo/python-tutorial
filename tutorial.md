@@ -236,11 +236,15 @@ This may look familiar like arrays in other languages.
 
 --
 
-Strings are written using double quotes.
+Strings are written using single or double quotes. Strings with double
+quotes can contain apostrophes or single quotes. Strings with single quotes 
+can contain double quotes.
 ```python
 x = "this is a test"
 print( len(x) ) # prints 14
 print( x[10] )  # prints t
+y = "we're home!"
+z = 'sam says "hi"'
 ```
 
 ---
@@ -424,7 +428,7 @@ my_function(a=12, b="abc") # {'a': 12, 'b': 'abc'}
 
 You can create an anonymous function in python using lambda:
 ```python
-g = lambda x: x**2
+g = lambda x: x**2 # ** is the exponent operator
 
 g(8) # 64
 ```
@@ -555,6 +559,8 @@ With the numbers 1 through 100, print 'Fizz' if the number is a multiple of
 multiple of 3 and a multiple of 5, print 'Fizzbuzz'. If the number is not a
 multiple of either 3 or 5, print the number.
 
+---
+
 # Solution 1
 
 ```python
@@ -570,6 +576,8 @@ for x in range(100):
 		print(n)
 ```
 
+---
+
 # Solution 2
 
 ```python
@@ -582,6 +590,8 @@ map( prn,
 					x) ) ) for x in 
 				[x+1 for x in range(100)] ])
 ```
+
+---
 
 # Done!
 
