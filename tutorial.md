@@ -36,6 +36,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 --
 
+Now try telling python to do something:
 ```python
 >>> print("hello world")
 hello world
@@ -80,7 +81,7 @@ You have just written and executed your first python program!
 
 # Variables in Python
 
-You create a variable just by assigning to it. No `var` or other
+You create a variable just by assigning to it. No var or other
 instantiation keywords. No declaration, just assign.
 
 ```python
@@ -114,7 +115,7 @@ print(x/y) # prints 0.44879895000000003
 
 # Control Flow
 
-Python defines blocks by indenting then code in the inner block.
+Blocks are defined in python by indenting the code.
 
 The `if` statement executes the indented code block if the condition
 evaluates to `True`:
@@ -222,10 +223,12 @@ We are going to talk about str, list, tuple.
 
 --
 
-Access elements of a sequence (such as a string) using brackets:
+Access elements of a sequence (such as a string) using brackets. The indexes
+start with zero:
 ```python
 x = "bar"
 print(x[0]) # b
+print(x[1]) # a
 print(x[2]) # r
 ```
 
