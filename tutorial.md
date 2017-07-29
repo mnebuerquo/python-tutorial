@@ -290,7 +290,6 @@ seq[1:3] # ['banana', 'pear']
 Negative indexes count backwards from the end of the list. This works for
 indexing single elements or slices:
 ```python
-seq[-1]   # 'plum'
 seq[1:-1] # ['banana', 'pear', 'grape']
 seq[-3:3] # ['pear']
 seq[-1:1] # []
@@ -302,8 +301,7 @@ You may omit either index in the slice to read from the start or to the end
 of the list:
 ```python
 seq[2:]  # ['pear', 'grape', 'plum']
-seq[:3]  # ['apple', 'banana', 'pear']
-seq[-2:] # ['grape', 'plum']
+seq[:-3] # ['apple', 'banana']
 seq[:]   # copy the entire list!
 ```
 
