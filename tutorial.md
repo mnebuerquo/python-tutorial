@@ -278,9 +278,9 @@ mytuple[1] = "bar" # TypeError: 'tuple' object does not support item assignment
 seq = [ "apple", "banana", "pear", "grape", "plum" ]
 ```
 
-Slice `seq[ start: stop ]` returns a slice from the sequence, where
-`start` is the first element in the slice, and `stop` is the element
-after the slice.
+Slice `seq[ start : stop ]` copies a sequence from the original sequence, where
+`start` is the index of the first element to copy, and `stop` is the index of the 
+element after the last element to copy.
 ```python
 seq[1:3] # ['banana', 'pear']
 ```
@@ -304,6 +304,7 @@ of the list:
 seq[2:]  # ['pear', 'grape', 'plum']
 seq[:3]  # ['apple', 'banana', 'pear']
 seq[-2:] # ['grape', 'plum']
+seq[:]   # copy the entire list!
 ```
 
 ---
