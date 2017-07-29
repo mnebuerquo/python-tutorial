@@ -1,9 +1,15 @@
-# This is a Python tutorial
-
-This is an intro to basic python, prepared for Deep Mind, the
-machine learning study group at Kroger Digital.
+# Sherman's 60 Minute Python Tutorial
 
 [View the Slide Show (https://mnebuerquo.github.io/python-tutorial/)](https://mnebuerquo.github.io/python-tutorial/)
+
+## Audience
+
+This is a short intro to python, prepared for Deep Mind, the machine learning 
+study group at Kroger Digital.
+
+This tutorial is intended for programmers who already know another language,
+and want an introduction to python. I assume at least some background knowledge 
+in the audience, and that they have python installed somewhere.
 
 ## About
 
