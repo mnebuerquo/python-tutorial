@@ -150,7 +150,7 @@ for name in [ "bob", "sam", "ben", "sue", "bev" ]:
 You can use the range function to use a numeric counter:
 ```python
 for i in range(10):
-    pass # this statement does nothing! use it as a placeholder
+    print(i) # prints 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
 ```
 
 --
@@ -194,7 +194,7 @@ for i in range(10):
 The `else` is not just used after `if`, but can follow a loop:
 ```python
 for i in range(10):
-    pass
+    pass # this statement does nothing! use it as a placeholder
 else:
     print("else")
 ```
@@ -208,8 +208,9 @@ for i in range(10):
     if i == 3:
         break
 else:
-    print("else")
-print("done")
+    print("else")   # this line is skipped
+
+print("done")       # prints "done"
 ```
 
 ---
@@ -267,23 +268,24 @@ mytuple[1] = "bar" # TypeError: 'tuple' object does not support item assignment
 # Slices
 
 ```python
-seq = [ 1, 2, 3, 4, 5 ]
+seq = [ "apple", "banana", "pear", "grape", "plum" ]
 ```
 
 Slice `seq[ start: stop ]` returns a slice from the sequence, where
 `start` is the first element in the slice, and `stop` is the element
 after the slice.
 ```python
-seq[1:3] # [ 2, 3 ]
+seq[1:3] # ['banana', 'pear']
 ```
 
 --
 
-Slices with negative indexes count backwards from the end of the list:
+Negative indexes count backwards from the end of the list. This works for
+indexing single elements or slices:
 ```python
-seq[-1]   # 5
-seq[1:-1] # [ 2, 3, 4 ]
-seq[-3:3] # [ 3 ]
+seq[-1]   # 'plum'
+seq[1:-1] # ['banana', 'pear', 'grape']
+seq[-3:3] # ['pear']
 seq[-1:1] # []
 ```
 
@@ -292,9 +294,9 @@ seq[-1:1] # []
 You may omit either index in the slice to read from the start or to the end
 of the list:
 ```python
-seq[2:]  # [ 3, 4, 5 ]
-seq[:3]  # [ 1, 2, 3 ]
-seq[-2:] # [ 4, 5 ]
+seq[2:]  # ['pear', 'grape', 'plum']
+seq[:3]  # ['apple', 'banana', 'pear']
+seq[-2:] # ['grape', 'plum']
 ```
 
 ---
