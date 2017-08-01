@@ -128,7 +128,7 @@ else:
     statement
 ```
 
--- 
+--
 
 Another form of if is the ternary operator:
 ```python
@@ -237,7 +237,7 @@ This may look familiar like arrays in other languages.
 --
 
 Strings are written using single or double quotes. Strings with double
-quotes can contain apostrophes or single quotes. Strings with single quotes 
+quotes can contain apostrophes or single quotes. Strings with single quotes
 can contain double quotes.
 ```python
 x = "this is a test"
@@ -279,7 +279,7 @@ seq = [ "apple", "banana", "pear", "grape", "plum" ]
 ```
 
 Slice `seq[ start : stop ]` copies a sequence from the original sequence, where
-`start` is the index of the first element to copy, and `stop` is the index of the 
+`start` is the index of the first element to copy, and `stop` is the index of the
 element after the last element to copy.
 ```python
 seq[1:3] # ['banana', 'pear']
@@ -486,7 +486,7 @@ from mymodule import myfunction # myfunction()
 
 # Packages
 
-A package is a directory with multiple modules and an `__init__.py` in it. You 
+A package is a directory with multiple modules and an `__init__.py` in it. You
 can import the entire package or individual modules or functions.
 
 ```bash
@@ -586,7 +586,7 @@ map( prn,
 		[ ( "fizzbuzz" if x % 15 == 0 else
 			( "fizz" if x % 3 == 0 else
 				( "buzz" if x % 5 == 0 else
-					x) ) ) for x in 
+					x) ) ) for x in
 				[x+1 for x in range(100)] ])
 ```
 
