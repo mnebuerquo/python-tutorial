@@ -50,7 +50,7 @@ hello world
 This is a simple python script, which we'll save as tut1.py:
 
 ```python
-#!/usr/bin/python
+#!/usr/bin/env python
 print("hello world")
 ```
 
