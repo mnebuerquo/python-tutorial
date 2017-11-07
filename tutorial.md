@@ -8,10 +8,8 @@
 Let's learn some basics of python in 60 minutes.
 
 We'll assume you already have python 2.7 installed. The code here should
-work in 3.x as well.
-
-???
-Does Sherman really know python?
+work in 3.x as well. There are some differences which can break your code if
+you use the wrong version.
 
 ---
 
@@ -98,9 +96,10 @@ Integers:
 ```python
 x = 10
 y = 3
-print(x/y) # prints 3
-           # (notice that integer division gives you an integer)
+print(x/y) # prints 3 (python 2.7)
+           # prints 3.3333333333333335 (python 3)
 ```
+Notice that integer division gives you an integer in 2.7, but a float in 3.x.
 
 --
 
@@ -171,10 +170,10 @@ while i < 10:
 The `continue` statement skips to the next iteration of the loop and
 continues looping:
 ```python
-for i in range(10):
+for i in range(1, 11):
     if i == 3:
         continue
-    print(i) # prints 0 1 2 4 5 6 7 8 9
+    print(i) # prints 1 2 4 5 6 7 8 9 10
 ```
 
 --
